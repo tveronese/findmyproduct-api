@@ -1,0 +1,8 @@
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Schuhhof Ku'damm", "location" : { "x" : 13.33094649, "y" : 52.50438806 }, "address" : "Joachimsthaler Str. 6 10623 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Adidas Originals", "location" : { "x" : 13.4076185, "y" : 52.5244903 }, "address" : "Münzstraße 13, 10178 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Deichmann Alexanderplatz", "location" : { "x" : 13.41459224, "y" : 52.51999904 }, "address" : "Grunerstraße 20, 10179 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Deichmann Ostbahnhof", "location" : { "x" : 13.43463371, "y" : 52.51042746 }, "address" : "Ostbahnhof, Am Ostbahnhof 9, 10243 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "SportScheck Mall of Berlin", "location" : { "x" : 13.38116119, "y" : 52.51045358 }, "address" : "Mall of Berlin, Leipziger Pl. 12, 10117 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Schuhbode Mall of Berlin", "location" : { "x" : 13.38229845, "y" : 52.51057112 }, "address" : "Mall of Berlin, Leipziger Pl. 12, 10117 Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Leiser - Arkaden", "location" : { "x" : 13.37499211, "y" : 52.50777957 }, "address" : "Potsdamer Platz Arkaden, Alter Potsdamer Str 7, 10785, Berlin" }
+{ "_class" : "com.findmyproduct.model.Shop", "name" : "Karstadt Sports", "location" : { "x" : 13.3310878, "y" : 52.5050449 }, "address" : "Joachimsthaler Str. 5-6 10623 Berlin" }
