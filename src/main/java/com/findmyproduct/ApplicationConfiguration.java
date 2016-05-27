@@ -25,7 +25,7 @@ public class ApplicationConfiguration extends AbstractMongoConfiguration {
 
     @Override
     protected String getMappingBasePackage() {
-        return "com.findmyproduct.repository";
+        return "com.findmyproduct.model.mongodb";
     }
 
 }

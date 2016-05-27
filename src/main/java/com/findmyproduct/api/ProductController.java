@@ -9,11 +9,12 @@ import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.Metrics;
 import org.springframework.data.geo.Point;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.findmyproduct.model.ProductStatus;
+import com.findmyproduct.model.mongodb.ProductStatus;
 import com.findmyproduct.service.ProductService;
 
 @Controller
@@ -32,14 +33,14 @@ public class ProductController {
 
     @ResponseBody
     @RequestMapping("{lzId}")
-    public ProductStatus status(final Long lzId) {
+    public ProductStatus status(@PathVariable final Long lzId) {
         return this.productService.findStatusByLzId(lzId);
     }
 
     @ResponseBody
     @RequestMapping("{lzId}/shops")
-    public List<ProductShop> listShops(final Long lzId, @RequestParam("location") final Point location,
-            @RequestParam("distance") final Optional<Double> distance) {
+    public List<ProductShop> listShops(@PathVariable final Long lzId, @RequestParam final Point location,
+            @RequestParam final Optional<Double> distance) {
         final Distance dist = new Distance(distance.orElse(DEFAULT_DISTANCE), Metrics.KILOMETERS);
         return this.productService.findProductWithNearestShops(lzId, location, dist);
     }

@@ -1,9 +1,8 @@
-package com.findmyproduct.model;
+package com.findmyproduct.model.mongodb;
 
 public enum ProductStatus {
 
     NOT_AVAILABLE,
-    NOT_IN_STOCK,
     AVAILABLE;
 
 }

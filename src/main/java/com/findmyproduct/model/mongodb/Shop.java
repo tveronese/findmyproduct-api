@@ -1,4 +1,4 @@
-package com.findmyproduct.model;
+package com.findmyproduct.model.mongodb;
 
 import static org.springframework.data.mongodb.core.index.GeoSpatialIndexType.GEO_2DSPHERE;
 
@@ -12,6 +12,8 @@ public class Shop {
 
     @Id
     public String id;
+
+    public Long lzShopId;
 
     public String name;
 
