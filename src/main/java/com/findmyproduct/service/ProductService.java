@@ -29,13 +29,13 @@ public class ProductService {
     }
 
     public ProductStatus findStatusByLzId(final Long lzId) {
-        final List<Product> products = this.productRepository.findProductsByLzId(lzId);
+        final List<Product> products = this.productRepository.findByLzId(lzId);
         return products.isEmpty() ? ProductStatus.NOT_AVAILABLE : ProductStatus.AVAILABLE;
     }
 
     public List<ProductShop> findProductWithNearestShops(final Long lzId, final Point location,
             final Distance distance) {
-        final List<Product> products = this.productRepository.findProductsByLzId(lzId);
+        final List<Product> products = this.productRepository.findByLzId(lzId);
         final Map<Long, Integer> lzShopIdsToQty = products.stream()
                 .collect(Collectors.toMap(p -> p.shopId, p -> p.quantity));
         final List<Shop> shops = this.shopRepository.findByLzShopIdInAndLocationNear(lzShopIdsToQty.keySet(), location,
@@ -51,6 +51,12 @@ public class ProductService {
         productShop.address = shop.address;
         productShop.quantity = lzShopIdsToQty.get(shop.lzShopId);
         return productShop;
+    }
+
+    public void updateStock(final Long lzId, final Long shopId, final Integer quantity) {
+        final Product product = this.productRepository.findByLzIdAndShopId(lzId, shopId);
+        product.quantity = quantity;
+        this.productRepository.save(product);
     }
 
 }
